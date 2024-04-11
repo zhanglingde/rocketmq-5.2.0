@@ -128,7 +128,9 @@ public class NamesrvStartup {
             }
             System.exit(0);
         }
-
+        // 设置 ROCKETMQ_HOME 环境变量
+        // namesrvConfig.setRocketmqHome("/Users/ling/software/rocketmq-all-4.9.4-bin-release");
+        namesrvConfig.setRocketmqHome("D:\\codes\\source\\rocketmq-5.2.0");
         if (null == namesrvConfig.getRocketmqHome()) {
             System.out.printf("Please set the %s variable in your environment to match the location of the RocketMQ installation%n", MixAll.ROCKETMQ_HOME_ENV);
             System.exit(-2);

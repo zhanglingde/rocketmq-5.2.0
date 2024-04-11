@@ -114,6 +114,10 @@ public class BrokerStartup {
             MixAll.properties2Object(properties, messageStoreConfig);
         }
 
+        // 设置 ROCKETMQ_HOME 环境变量
+        // brokerConfig.setRocketmqHome("/Users/ling/codes/source/RocketMqSource");
+        brokerConfig.setRocketmqHome("D:\\codes\\source\\rocketmq-5.2.0");
+        brokerConfig.setNamesrvAddr("127.0.0.1:9876");
         MixAll.properties2Object(ServerUtil.commandLine2Properties(commandLine), brokerConfig);
         if (null == brokerConfig.getRocketmqHome()) {
             System.out.printf("Please set the %s variable in your environment " +
